@@ -124,7 +124,7 @@ iptables -A OUTPUT -p tcp --sport 22 -m state --state ESTABLISHED -j ACCEPT
 iptables -A OUTPUT -p tcp --sport 443 -m state --state ESTABLISHED -j ACCEPT
 iptables -A OUTPUT -p tcp --sport 80 -m state --state ESTABLISHED -j ACCEPT
 iptables -A OUTPUT -p udp -j ACCEPT
-iptables -t nat -A POSTROUTING -s 192.168.7.0/24 -j SNAT --to-source 128.199.102.87
+iptables -t nat -A POSTROUTING -s 192.168.7.0/24 -j SNAT --to-source 128.199.125.105
 iptables -t nat -A POSTROUTING -s 192.168.7.0/24 -o eth0 -j MASQUERADE
 service iptables save
 service iptables save
